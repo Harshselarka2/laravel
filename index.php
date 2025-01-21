@@ -14,18 +14,24 @@
     </style>
 </head>
 <body>
-     <?php
-       $books = ["atomic habits ",
-       "prena nu zarnu",
-        " 7 habits of highly influnteal ppl"];
+     <?php 
+       $books = [["name"=>"atomic habits ",
+                    "author"=>"james clear"
+       ],
+       ["name"=>"prena nu zarnu",
+       "author"=>"dr.jitendra adhiya"
+       ]]; 
      ?>
-    <h1>you have read <?=$books[2]?></h1>
      <ul>
-        <?php
-         foreach($books as $book){
-            echo "you have read $book". "<br>";
-        }
-        ?>
+      <?php foreach($books as $book): ?>
+
+        <li>
+              <?= $book["name"]?>
+        </li>
+      
+     <?php endforeach; ?>
+
+
      </ul>
 </body>
 </html>
